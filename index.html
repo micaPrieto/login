@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="images/loginImage.png" type="image/x-icon">
+
+</head>
+
+
+<body>
+  <!-- Contenedor principal que agrupa todos los elementos del login -->
+  <div class="container">
+
+    <!-- Imagen -->
+    <img src="images/loginImage.png" alt="Imagen ilstrativa" class="imagen">
+
+    <!---------------- Inicio de Sesión --------------->
+    <h2>Iniciá sesión</h2>
+
+    <form action="formulario">
+        <input type="email" id="email" placeholder="Correo electrónico"required />
+
+        <!-- Contraseña -->
+        <input type="password" id="password" placeholder="Contraseña" required />
+    
+        <!-- Mensaje de error que se mostrará si algo falla al loguear -->
+     <div id="error" class="error-mensaje"></div>
+        <!-- Recuperar la contraseña -->
+        <div class="olvidate-contra">
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+    
+        
+
+    </form>
+  <!-- BOTON de inicio de sesion: llama a la funcion login() desde JS -->
+  <button onclick="login()">Ingresar a la cuenta</button>
+     
+
+     <!----------------------------------------------->
+
+
+    <!-- Texto con link para registrarse si no se tiene cuenta -->
+    <div class="switch">
+      ¿Aún no tenés cuenta? <a href="register.html">Registrate</a>
+    </div>
+
+    <!-- Botones para simular registro con redes sociales -->
+    <div>
+      <button class="google">
+        <i class="fa-brands fa-google"></i>
+      </button> <!-- Boton de Google -->
+      <button class="facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </button> <!-- Boton de Facebook -->
+    
+      <p id = "p-redes">Registrate con Google o Facebook</p>
+    </div>
+
+   
+  </div>
+
+  <!-- Script JS que contiene la lógica del login -->
+  <script src="script.js"></script>
+</body>
+</html>

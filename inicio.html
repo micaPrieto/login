@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"> 
+  <title>Bienvenido</title> 
+  <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+
+  <div class="container">
+    <h2 id="welcome-msg"></h2> <!-- Mensaje de bienvenida (personalizable con JS) -->
+    <button onclick="logout()">Cerrar sesión</button> <!-- Botón para cerrar sesión -->
+  </div>
+
+
+
+  <script> //--------- SCRIPT ----------------->
+        // Recuperamos del localStorage el usuario logueado
+        const user = JSON.parse(localStorage.getItem("loggedUser"));
+
+        // Si no hay usuario en sesión, redirigimos al login
+        if (!user) {
+        window.location.href = "index.html";
+        } else {
+        // Si hay usuario, mostramos mensaje personalizado
+        document.getElementById("welcome-msg").innerText = `¡Hola ${user.name}! 👋` ;
+        }
+
+        // Cerrar sesión
+        function logout() 
+        {
+        localStorage.removeItem("loggedUser"); // Eliminamos los datos de sesión
+        window.location.href = "index.html"; // Redirigimos al login
+        }
+  </script>
+
+</body>
+</html>

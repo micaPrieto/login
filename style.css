@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🎨 Estilos globales para el body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+  
+  /* 📦 Contenedor general que agrupa inputs, botones, imágenes, etc. */
+  .container {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    padding: 20px; /* espacio interno alrededor de todos los inputs */
+    flex-direction: column; /* apila los elementos verticalmente */
+    align-items: center; /* centra horizontalmente */
+    justify-content: center; /* centra verticalmente si hay altura definida */
+    gap: 5px; /* espacio entre los elementos */
+  }
+  
+  
+  /* ✏️ Estilos de todos los inputs (correo, contraseña, etc.) */
+  input {
+    width: 100%; /* Que ocupe todo el ancho del contenedor */
+    padding: 15px;
+    margin: 8px 0; /* Margen vertical */
+    border-radius: 10px;
+    border: 1px solid #ccc; /* Borde gris claro */
+    font-size: 15px;
+  }
+  
+  /* 🟩 Botones generales (login, crear cuenta, logout) */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6dbb74; /* Verde suave */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* 🟩 Efecto hover para botones */
+  button:hover {
+    background-color: #59a563; /* Verde más oscuro */
+  }
+
+  .google, .facebook {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .google {
+    background-color: #db4437; /* Rojo Google */
+  }
+
+  .facebook {
+    background-color: #1877f2; /* Azul Facebook */
+  }
+
+  .google:hover {
+    background-color: #c33d2f;
+    transform: scale(1.05);
+  }
+
+  .facebook:hover {
+    background-color: #145ccf;
+    transform: scale(1.05);
+  }
+  
+  /* 🖼 Imagen de cabecera (login o registro) */
+  .imagen {
+    max-height: 250px;
+    margin-bottom: 10px;
+    margin-top: 20px; 
+  }
+  
+  /* 🌐 Contenedor de redes sociales */
+  .redes {
+    margin-top: 20px;
+  }
+  
+  
+  /* 🔄 Enlaces para cambiar de login a registro o recuperar contraseña */
+  .switch, .olvidate-contra {
+    margin: 15px 0;
+    font-size: 14px;
+  }
+  
+  /*Mensajes de error en validaciones */
+  .error-mensaje {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* 🔐 Información de ayuda sobre contraseñas */
+  .password-info {
+    font-size: 12px;
+    color: #555;
+  }
+
+p {
+    color:gray;
+    font-size: 12px
+}
+
+#welcome-msg {
+  margin-bottom: 20px; /* Podés ajustar este valor a tu gusto */
+}
+
+
+/* ------- Responsive para pantallas pequeñas ---------------- */
+
+/* Media Query para pantallas pequeñas (móviles con ancho menor o igual a 600px) */
+@media (max-width: 600px) {
+  
+  /* 🔲 Ajustamos el padding y el ancho máximo del contenedor principal para que se vea mejor en pantallas pequeñas */
+  .container {
+    padding: 15px; /* Menos padding para ahorrar espacio */
+    max-width: 90%; /* Ocupa hasta el 90% del ancho de la pantalla */
+  }
+
+  /* 🔠 Reducimos tamaño de texto y padding de inputs y botones para que quepan mejor en pantalla */
+  input, button {
+    font-size: 14px; /* Texto un poco más pequeño */
+    padding: 12px; /* Menos espacio interno para que se vean más compactos */
+  }
+
+  /* 🖼 Reducimos el alto máximo de la imagen para que no ocupe demasiado espacio vertical */
+  .imagen {
+    max-height: 180px;
+  }
+
+  /* 🔄 Enlaces secundarios más pequeños para que se vean bien en pantallas chicas */
+  .switch, .olvidate-contra {
+    font-size: 13px;
+  }
+}
